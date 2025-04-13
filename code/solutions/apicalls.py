@@ -1,7 +1,9 @@
 import requests
+import json 
+
 
 # Put your  CENT Ischool IoT Portal API KEY here.
-APIKEY = "APIKEYHERE"
+APIKEY = "e40002e7f7bc364b83c71885"
 
 def get_google_place_details(google_place_id: str) -> dict:
     header = { 'X-API-KEY': APIKEY }
@@ -10,7 +12,6 @@ def get_google_place_details(google_place_id: str) -> dict:
     response = requests.get(url, headers=header, params=params)
     response.raise_for_status()
     return response.json()  # Return the JSON response as a dictionary
-
 
 def get_azure_sentiment(text: str) -> dict:
     header = { 'X-API-KEY': APIKEY }

@@ -19,7 +19,6 @@ def reviews_step(place_ids: str|pd.DataFrame) -> pd.DataFrame:
     '''
       1. place_ids --> reviews_step --> reviews: place_id, name (of place), author_name, rating, text 
     '''
-
     # if string, then its a filename so load into dataframe
     if isinstance(place_ids, str):
         place_ids_df = pd.read_csv(place_ids)
